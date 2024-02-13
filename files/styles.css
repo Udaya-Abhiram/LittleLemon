@@ -1,0 +1,268 @@
+
+body{
+    height: 150vh;
+    background-color: #e2e2e2;
+}
+.headingName{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 2.3em;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    padding:0.5em;
+}
+.logoContainer{
+    height: 12vh;
+    display: flex;
+    justify-content: center;
+    padding: 1.3em;
+}
+.logoContainer img{
+    height: 5em;
+}
+
+.navigationElements{
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #293c29;
+    border-radius: 12px;
+}
+
+.navigationElements li{
+    list-style-type: none;
+    display: inline;
+    padding: 1.6em;
+}
+
+.navigationElements li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+#menubutton{
+    display: none;
+}
+
+.active{
+    color: #d7c5c5;
+}
+
+
+
+/* responsive hamburger */
+
+@media only screen and (max-width: 560px){
+    body{
+        height: 100vh;
+    }
+    .logoContainer{
+        display: flex;
+        justify-content: flex-start;
+        padding: 0em;
+    }
+    .logoContainer img{
+        height: 3em;
+    }
+    .headingName{
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 1.5em;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+    }
+    .navigationElements{
+        display: none;
+    }
+
+    #menubutton{
+        display: flex;
+        justify-content: flex-end;
+        /* display: block; */
+        margin-top: -4.3rem;
+        padding-right: 1rem;
+    }
+    .showdata{
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+.imageContainer{
+    height: 40vh;
+    background-image: url('images/pizza.PNG');
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.imageContainer h1{
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+    padding:2rem;
+}
+
+.imageContainer p{
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+    padding-left: 2rem;
+}
+
+.emptyspace{
+    height: 3vh;
+}
+.container{
+    height: 70vh;
+    display: grid;
+    grid-template-columns: 0.1fr 1fr 0.1fr 1fr 0.1fr 1fr 0.1fr;
+}
+
+/* copie */
+.container .card{
+	width: 90%;
+	overflow: hidden;
+	text-align: center;
+	border-radius: 12px;
+	box-shadow: 0 0 7px rgba(110, 108, 108, 0.8);
+    background-color: #dfb67f;
+}
+.container .card .product-image{
+	width: 93%;
+    padding:0.5rem;
+}
+
+.container .card .product-image img:hover{
+	transform: scale(1.1);
+}
+.container .card .product-image img{
+	width: 90%;
+	transition: 0.4s;
+    object-fit: cover;
+    height: 140px;
+    border-radius: 12px;
+}
+
+.container .card .product-info p{
+    padding: 0.5em;
+    text-align: justify;
+    /* color: #e2e2e2; */
+    font-size: 0.9em;
+    word-spacing: 2px;
+}
+
+.container .card .product-info a{
+    text-transform: uppercase;
+    font-size: 0.7em;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.footerdata{
+    height: 10vh;
+    background-color: #d7c5c5;
+    
+}
+.footerdata p{
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    padding-top:1.4rem;
+    letter-spacing: 1px;
+}
+
+.aboutHeading{
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.aboutContent{
+    text-align: center;
+}
+
+.register-title{
+    text-align: center;
+    text-transform: uppercase;
+    /* font-size: rem; */
+    font-weight: bold;
+    color: #444444;
+}
+
+.maps{
+    padding: 2em 1em 0 2em;
+}
+.maps iframe{
+    width: 100%;
+}
+
+.containerregister {
+    max-width: 700px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group textarea {
+    width: 700px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+  .form-group textarea {
+    height: 150px;
+  }
+
+  .btn {
+    background-color: #468e49;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    background-color: #0056b3;
+  }
+
+  @media screen and (max-width: 768px) {
+    .container {
+      width: 90%;
+    }
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group textarea {
+    width: 500px;
+  }
+}
+
+  @media screen and (max-width: 548px) {
+    .container {
+      width: 90%;
+    }
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group textarea {
+    width: 300px;
+  }
+}

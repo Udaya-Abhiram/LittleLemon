@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Display Example</title>
+    <style>
+        /* Optional: CSS styles for better appearance */
+        #list-container {
+            display: none;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<button onclick="displayList()">Display List</button>
+<div id="list-container">
+    <ul id="list">
+        <!-- List items will be added here dynamically -->
+    </ul>
+</div>
+
+<script>
+    function displayList() {
+        // Get the container element
+        let listContainer = document.getElementById('list-container');
+        
+        // Toggle the display property
+        if (listContainer.style.display === 'none') {
+            listContainer.style.display = 'block';
+            // Clear any existing list items
+            document.getElementById('list').innerHTML = '';
+            // Add list items dynamically
+            let items = [
+                { name: 'Item 1', url: 'index.html' },
+                { name: 'Item 2', url: 'page2.html' },
+                { name: 'Item 3', url: 'page3.html' },
+                { name: 'Item 4', url: 'page4.html' },
+                { name: 'Item 5', url: 'page5.html' }
+            ];
+            items.forEach(function(item) {
+                let li = document.createElement('li');
+                li.textContent = item.name;
+                li.addEventListener('click', function() {
+                    // Redirect to the corresponding page when the list item is clicked
+                    window.location.href = item.url;
+                });
+                document.getElementById('list').appendChild(li);
+            });
+        } else {
+            listContainer.style.display = 'none';
+        }
+    }
+</script>
+
+</body>
+</html>
